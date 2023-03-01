@@ -1,0 +1,45 @@
+<p>first-page works!</p>
+
+
+<div class="container mt-4" >
+    <div class="card">
+            <h1>Employee Leave Registation</h1>
+    
+    <form>
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" [(ngModel)]="first_name" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+        </div>
+    
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" [(ngModel)]="last_name" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+        </div>
+
+          <div class="form-group">
+            <label>Leave start</label>
+            <input type="text" [(ngModel)]="leave_start" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+          </div>
+
+          <div class="form-group">
+            <label>Leave start</label>
+            <input type="text" [(ngModel)]="leave_end" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+          </div>
+
+          <div class="form-group">
+            <label>Type of Leave</label>
+            <select [(ngModel)]="leave_type" [ngModelOptions]="{standalone: true}" class="form-control" id="leaveType">
+              <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+            </select>
+        </div>
+        
+
+          <div class="form-group">
+            <label>Reason</label>
+            <input type="text" [(ngModel)]="reason" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+          </div>
+    
+        <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Save</button>
+      
+      </form>
+    </div>
